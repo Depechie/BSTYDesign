@@ -1,0 +1,41 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Application xmlns="http://xamarin.com/schemas/2014/forms" xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" x:Class="BSTYDesign.App">
+	<Application.Resources>
+    	<ResourceDictionary>
+    	<Color x:Key="DarkColor">#1A2D54</Color>
+    		<Style x:Key="BaseLabelStyle" TargetType="Label">
+				<Setter Property="TextColor" Value="{StaticResource DarkColor}" />
+			</Style>
+
+			<Style x:Key="BaseBoldLabelStyle" TargetType="Label" BasedOn="{StaticResource BaseLabelStyle}">
+				<Setter Property="FontAttributes" Value="Bold" />
+			</Style>
+			
+			<Style x:Key="TitleLabelStyle" TargetType="Label" BasedOn="{StaticResource BaseBoldLabelStyle}">
+				<Setter Property="FontSize" Value="20" />
+			</Style>
+
+			<Style x:Key="CategoryHeaderLabelStyle" TargetType="Label" BasedOn="{StaticResource BaseBoldLabelStyle}">
+				<Setter Property="FontSize" Value="28" />
+			</Style>
+
+			<Style x:Key="CategoryPostDisplayLabelStyle" TargetType="Label" BasedOn="{StaticResource BaseBoldLabelStyle}">
+				<Setter Property="FontSize" Value="10" />
+			</Style>
+
+			<Style x:Key="CategoryTitleLabelStyle" TargetType="Label" BasedOn="{StaticResource BaseBoldLabelStyle}">
+				<Setter Property="FontSize" Value="14" />
+			</Style>
+
+			<Style x:Key="CategoryAbstractLabelStyle" TargetType="Label" BasedOn="{StaticResource BaseBoldLabelStyle}">
+				<Setter Property="FontSize" Value="10" />
+				<Setter Property="TextColor" Value="Gray" />
+			</Style>
+
+			<Style x:Key="CategoryDetailDisplayLabelStyle" TargetType="Label" BasedOn="{StaticResource BaseBoldLabelStyle}">
+				<Setter Property="FontSize" Value="8" />
+				<Setter Property="TextColor" Value="Gray" />
+			</Style>
+		</ResourceDictionary>
+	</Application.Resources>
+</Application>

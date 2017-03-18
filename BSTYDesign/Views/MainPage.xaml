@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+	xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+	xmlns:local="clr-namespace:BSTYDesign"
+	x:Class="BSTYDesign.Views.MainPage">
+	<Grid>
+		<Grid.RowDefinitions>
+			<RowDefinition Height="60" />
+			<RowDefinition Height="1*" />
+			<RowDefinition Height="3*" />
+		</Grid.RowDefinitions>
+			
+		<StackLayout x:Name="TitleLayout" Orientation="Horizontal" Grid.Row="0" Margin="20">
+			<Label Text="BSTY" HorizontalOptions="StartAndExpand" Style="{StaticResource TitleLabelStyle}" />
+			<Label Text="MENU" HorizontalOptions="EndAndExpand" TextColor="Silver" />
+		</StackLayout>
+
+		<StackLayout Grid.Row="2" Margin="20,0,0,0">
+			<Label x:Name="CategoryLabel" Text="Interior" Style="{StaticResource CategoryHeaderLabelStyle}" />
+			<ListView x:Name="CategoryListView" SeparatorColor="Transparent"
+				RowHeight="135"
+				Margin="0,20,0,0"
+				ItemsSource="{Binding CategoryList}">
+				<ListView.ItemTemplate>
+					<DataTemplate>
+						<ViewCell>
+							<StackLayout Orientation="Horizontal">
+								<Image Source="post01.jpg" WidthRequest="115" HeightRequest="115" VerticalOptions="StartAndExpand" />
+								
+								<Grid Margin="10,0,20,0" HeightRequest="115" VerticalOptions="StartAndExpand">
+									<Grid.RowDefinitions>
+										<RowDefinition Height="Auto" />
+										<RowDefinition Height="Auto" />
+										<RowDefinition Height="Auto" />
+										<RowDefinition Height="*" />
+									</Grid.RowDefinitions>
+
+									<Label Text="{Binding PostDisplay}" Style="{StaticResource CategoryPostDisplayLabelStyle}" Grid.Row="0" /> 
+									<Label Text="{Binding Title}" Style="{StaticResource CategoryTitleLabelStyle}" Grid.Row="1" />
+									<Label Text="{Binding Abstract}" Style="{StaticResource CategoryAbstractLabelStyle}" Grid.Row="2" />
+									<Label Text="{Binding DetailDisplay}" Style="{StaticResource CategoryDetailDisplayLabelStyle}"
+										VerticalOptions="End"
+										Grid.Row="3" />
+								</Grid>
+							</StackLayout>
+						</ViewCell>
+					</DataTemplate>
+				</ListView.ItemTemplate>
+			</ListView>
+		</StackLayout>
+	</Grid>
+</ContentPage>

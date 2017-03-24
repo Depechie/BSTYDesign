@@ -17,5 +17,10 @@ namespace BSTYDesign.Views
 
             BindingContext = this;
         }
+
+        private void OnItemSelected(object sender, SelectedItemChangedEventArgs e)
+        {
+            CategoryListView.SelectedItem = null;
+        }
     }
 }

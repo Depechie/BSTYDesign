@@ -30,6 +30,26 @@ namespace BSTYDesign.Services
                 Views = 434
             });
 
+            items.Add(new CategoryItem()
+            {
+                Title = "Allen Key House by Architect Prineas",
+                Abstract = "Allen Key House is a minimal residence located in Lane Cove, Australia, designed by Architect Prineas.",
+                Author = "Sarah",
+                Category = "Interior",
+                SubCategory = "Architecture",
+                Views = 434
+            });
+
+            items.Add(new CategoryItem()
+            {
+                Title = "Allen Key House by Architect Prineas",
+                Abstract = "Allen Key House is a minimal residence located in Lane Cove, Australia, designed by Architect Prineas.",
+                Author = "Sarah",
+                Category = "Interior",
+                SubCategory = "Architecture",
+                Views = 434
+            });
+
             return items;
         }
     }

@@ -10,21 +10,23 @@
 			<RowDefinition Height="3*" />
 		</Grid.RowDefinitions>
 			
-		<StackLayout x:Name="TitleLayout" Orientation="Horizontal" Grid.Row="0" Margin="20">
+		<StackLayout x:Name="TitleLayout" Orientation="Horizontal" Grid.Row="0" Margin="20,20,20,10">
 			<Label Text="BSTY" HorizontalOptions="StartAndExpand" Style="{StaticResource TitleLabelStyle}" />
 			<Label Text="MENU" HorizontalOptions="EndAndExpand" TextColor="Silver" />
 		</StackLayout>
 
-		<StackLayout Grid.Row="2" Margin="20,0,0,0">
-			<Label x:Name="CategoryLabel" Text="Interior" Style="{StaticResource CategoryHeaderLabelStyle}" />
+		<StackLayout Grid.Row="2" Margin="0,0,0,0">
+			<Label x:Name="CategoryLabel" Text="Interior" Style="{StaticResource CategoryHeaderLabelStyle}"
+					Margin="20,0,0,0"/>
 			<ListView x:Name="CategoryListView" SeparatorColor="Transparent"
+				ItemSelected="OnItemSelected"
 				RowHeight="135"
 				Margin="0,20,0,0"
 				ItemsSource="{Binding CategoryList}">
 				<ListView.ItemTemplate>
 					<DataTemplate>
 						<ViewCell>
-							<StackLayout Orientation="Horizontal">
+							<StackLayout Orientation="Horizontal" Margin="20,10,0,0">
 								<Image Source="post01.jpg" WidthRequest="115" HeightRequest="115" VerticalOptions="StartAndExpand" />
 								
 								<Grid Margin="10,0,20,0" HeightRequest="115" VerticalOptions="StartAndExpand">

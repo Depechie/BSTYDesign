@@ -11,6 +11,8 @@ namespace BSTYDesign.Views
 
         public MainPage()
         {
+            NavigationPage.SetHasNavigationBar(this, false);
+
             InitializeComponent();
 
             CategoryList = DataService.GetItems("Interior");
@@ -18,9 +20,15 @@ namespace BSTYDesign.Views
             BindingContext = this;
         }
 
-        private void OnItemSelected(object sender, SelectedItemChangedEventArgs e)
+        private async void OnItemSelected(object sender, SelectedItemChangedEventArgs e)
         {
-            CategoryListView.SelectedItem = null;
+            if (CategoryListView.SelectedItem != null)
+            {
+                DetailPage detailPage = new DetailPage();
+                detailPage.CategoryItem = (CategoryItem)CategoryListView.SelectedItem;
+                CategoryListView.SelectedItem = null;
+                await Navigation.PushAsync(detailPage);
+            }
         }
     }
 }

@@ -4,6 +4,7 @@ namespace BSTYDesign.Models
 {
     public class CategoryItem
     {
+        public int Key { get; set; }
         public string Title { get; set; }
         public DateTime PostDateTime { get; set; }
         public string Abstract { get; set; }
